@@ -65,6 +65,7 @@ class OrderController extends Controller
                 'description' => $book->description,
                 'price' => $book->price,
                 'condition' => $book->condition,
+                'status' => $book->status,
                 'images' => $book->images->map(fn($img) => [
                     'id' => $img->id,
                     'url' => asset($img->image_url)
